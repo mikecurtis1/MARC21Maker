@@ -22,7 +22,7 @@ class MARC21Maker
 	private $_leader_type_of_record = 'a'; // language material, c=notated music, e=cartographic, g=projected, i=non-music sournd, j=musical sound
 	private $_leader_bibliographic_level = 'm'; // monograph/item, s=serial
 	private $_leader_type_of_control = ' ';
-	private $_leader_character_coding_scheme = ' ';
+	private $_leader_character_coding_scheme = 'a'; // Unicode/UTF-8 encoding
 	private $_leader_indicator_count = '2';
 	private $_leader_subfield_code_count = '2'; 
 	private $_leader_base_address_of_data = '00000'; // calculated, equal to the sum of the lengths of the leader and the directory, including the field terminator at the end of the directory
