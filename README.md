@@ -91,15 +91,15 @@ This ensures correct encoding of field content.
 ```php
 <?php
 
-require_once('Marc21Maker.php');
+require_once('../src/MARC21Maker.php');
+require_once('../src/EscapeString.php');
 
-$mrc = new Marc21Maker('n','a','m');
-
-$mrc->addControlField('008','141030s2014^^^^^^^^^^^^^^^^^^000^^^eng^d');
+$mrc = new MARC21Maker('n','j','a');
+$mrc->addControlField('001','123456789');
 $mrc->addDataField('100',' ',' ','$aauthor');
 $mrc->addDataField('245',' ',' ','$aTitle With Escaped \$ Dollar Sign');
 
-echo $mrc->getMRC();
+$mrc->emitMRC();
 ```
 
 ---
@@ -117,8 +117,8 @@ The generated record was tested using MarcEdit, a widely used MARC utility.
 It loaded without errors and was successfully parsed into readable MARC format:
 
 ```
-=LDR  00151nja  2200061   4500
-=008  141030s2014^^^^^^^^^^^^^^^^^^000^^^eng^d
+=LDR  00120nja  2200061   4500
+=001  123456789
 =100  \\$aauthor
 =245  \\$aTitle With Escaped {dollar} Dollar Sign
 ```
