@@ -16,10 +16,12 @@ docker run -p 8084:80 -d -v $(pwd):/var/www/html marc21maker
 require_once('../src/MARC21Maker.php');
 require_once('../src/EscapeString.php');
 
-$mrc = new MARC21Maker('n','j','a');
+$mrc = new MARC21Maker('n','g','m');
 $mrc->addControlField('001','123456789');
-$mrc->addDataField('100',' ',' ','$aauthor');
-$mrc->addDataField('245',' ',' ','$aTitle With Escaped \$ Dollar Sign');
+$mrc->addDataField('100','0',' ','$aAkira Kurosawa (黒澤 明)');
+$mrc->addDataField('240','1','0','$aSeven Samurai');
+$mrc->addDataField('245',' ',' ','$a七人の侍');
+$mrc->addDataField('264',' ','1','$c1954');
 $mrc->emitMRC();
 
 /* 

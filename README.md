@@ -132,6 +132,37 @@ This confirms that:
 
 ---
 
+## UTF-8 Encoding Example
+
+```php
+<?php
+
+require_once('../src/MARC21Maker.php');
+require_once('../src/EscapeString.php');
+
+$mrc = new MARC21Maker('n','g','m');
+$mrc->addControlField('001','123456789');
+$mrc->addDataField('100','0',' ','$aAkira Kurosawa (黒澤 明)');
+$mrc->addDataField('240','1','0','$aSeven Samurai');
+$mrc->addDataField('245',' ',' ','$a七人の侍');
+$mrc->addDataField('264',' ','1','$c1954');
+
+$mrc->emitMRC();
+```
+
+Output
+
+```
+=LDR  00172ngm  2200085   4500
+=001  123456789
+=100  0\$aAkira Kurosawa (黒澤 明)
+=240  10$aSeven Samurai
+=245  \\$a七人の侍
+=264  \1$c1954
+```
+
+---
+
 ## Running with Docker
 
 This project has been containerized to provide a consistent runtime environment.
