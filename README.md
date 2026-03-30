@@ -117,7 +117,7 @@ The generated record was tested using MarcEdit, a widely used MARC utility.
 It loaded without errors and was successfully parsed into readable MARC format:
 
 ```
-=LDR  00120nja  2200061   4500
+=LDR  00120nja a2200061   4500
 =001  123456789
 =100  \\$aauthor
 =245  \\$aTitle With Escaped {dollar} Dollar Sign
@@ -153,7 +153,7 @@ $mrc->emitMRC();
 Output
 
 ```
-=LDR  00172ngm  2200085   4500
+=LDR  00172ngm a2200085   4500
 =001  123456789
 =100  0\$aAkira Kurosawa (黒澤 明)
 =240  10$aSeven Samurai
