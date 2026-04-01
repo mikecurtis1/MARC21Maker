@@ -108,6 +108,10 @@ $mrc->emitMRC();
 
 The generated output is a binary MARC21 record containing non-printable delimiters. It is intended for use with MARC-compatible tools.
 
+```
+00120nja  2200061   4500001001000000100001100010245003700021123456789  aauthor  aTitle With Escaped $ Dollar Sign
+```
+
 ---
 
 ## Validation
@@ -176,7 +180,7 @@ docker build -t marc21maker .
 ### Run the container
 
 ```bash
-docker run -p 8080:80 marc21maker
+docker run -p 8080:80 -d -v $(pwd):/var/www/html marc21maker
 ```
 
 Then open:
@@ -207,6 +211,15 @@ This project demonstrates:
 * Directory indexing and offset alignment
 * Parsing and handling of escape sequences
 * Validation against real-world MARC tooling
+
+---
+
+## MARC21 Resources
+
+* http://www.loc.gov/marc/bibliographic/bdintro.html
+* http://www.loc.gov/marc/specifications/specrecstruc.html
+* http://www.loc.gov/marc/bibliographic/bdleader.html
+* https://www.loc.gov/marc/makrbrkr.html
 
 ---
 
