@@ -108,7 +108,7 @@ $mrc->emitMRC();
 
 The generated output is a binary MARC21 record containing non-printable delimiters. It is intended for use with MARC-compatible tools.
 
-```binary
+```text
 00120nja  2200061   4500001001000000100001100010245003700021123456789  aauthor  aTitle With Escaped $ Dollar Sign
 ```
 
