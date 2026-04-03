@@ -28,14 +28,14 @@ $mrc = new MARC21Maker('n','a','m');
 $mrc->addControlField('001','0002');
 $mrc->addDataField('100','0',' ','$aJohn Doe');
 $mrc->addDataField('245',' ',' ','$aTitle #2');
-$mrc->addDataField('264',' ','1','$c2024');
+$mrc->addDataField('264',' ','1','$c2025');
 $set .= $mrc->getMRC();
 
 $mrc = new MARC21Maker('n','a','m');
 $mrc->addControlField('001','0003');
 $mrc->addDataField('100','0',' ','$aJohn Doe');
 $mrc->addDataField('245',' ',' ','$aTitle #3');
-$mrc->addDataField('264',' ','1','$c2024');
+$mrc->addDataField('264',' ','1','$c2026');
 $set .= $mrc->getMRC();
 
 $mrc->emitMRC('utf-8',$set,'set_of_marc_records');
