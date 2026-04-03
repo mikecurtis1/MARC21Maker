@@ -191,7 +191,7 @@ Then open:
 http://localhost:8080
 ```
 
-to execute the example script (if provided).
+to execute the example script.
 
 ---
 
