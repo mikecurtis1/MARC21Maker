@@ -1,8 +1,8 @@
 # MARC21Maker
 
-**MARC21Maker** is a lightweight PHP implementation for generating valid **MARC21 binary records** from structured input.
+**MARC21Maker** is a lightweight PHP implementation for generating valid **MARC 21 binary records** from structured input.
 
-This project was created to explore and demonstrate how MARC21 works *at a low level*, without relying on MARCXML or external libraries.
+This project was created to explore and demonstrate how MARC 21 works *at a low level*, without relying on MARCXML or external libraries.
 
 ---
 
@@ -216,7 +216,7 @@ This project demonstrates:
 
 ---
 
-## MARC21 Resources
+## MARC 21 Resources
 
 * http://www.loc.gov/marc/bibliographic/bdintro.html
 * http://www.loc.gov/marc/specifications/specrecstruc.html
