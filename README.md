@@ -167,6 +167,12 @@ Output
 
 This project has been containerized to provide a consistent runtime environment.
 
+### Clone the repo
+
+```bash
+git clone https://github.com/mikecurtis1/MARC21Maker.git
+```
+
 ### Build the container
 
 ```bash
