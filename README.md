@@ -8,16 +8,16 @@ This project was created to explore and demonstrate how MARC21 works *at a low l
 
 ## Overview
 
-MARC21 is a legacy bibliographic data format that combines:
+MARC 21 is a legacy bibliographic data format that combines:
 
 * Fixed-length fields (leader)
 * Byte-offset directory entries
 * Variable-length field data
 * Special delimiter characters for fields and subfields
 
-Unlike modern formats (JSON, XML), MARC21 requires strict positional accuracy. Every part of the record must align exactly at the byte level.
+Unlike modern formats (JSON, XML), MARC 21 requires strict positional accuracy. Every part of the record must align exactly at the byte level.
 
-This project constructs a complete MARC21 record by assembling these components programmatically.
+This project constructs a complete MARC 21 record by assembling these components programmatically.
 
 ---
 
@@ -27,7 +27,7 @@ Most real-world systems interact with MARC data using higher-level abstractions 
 
 This project was built to:
 
-* Understand the MARC21 binary format directly
+* Understand the MARC 21 binary format directly
 * Implement record construction from the specification
 * Verify that correct leader and directory values can be generated dynamically
 
@@ -39,7 +39,7 @@ The focus is on correctness of structure rather than abstraction or framework us
 
 ### Leader Construction
 
-The MARC21 leader is a fixed 24-character field containing:
+The MARC 21 leader is a fixed 24-character field containing:
 
 * Total record length
 * Base address of data
@@ -63,7 +63,7 @@ These offsets must align precisely with the position of each field in the record
 
 ### Delimiters and Control Characters
 
-MARC21 uses non-printable ASCII characters:
+MARC 21 uses non-printable ASCII characters:
 
 * Field terminator → `chr(30)`
 * Record terminator → `chr(29)`
@@ -106,7 +106,7 @@ $mrc->emitMRC();
 
 ## Example Output
 
-The generated output is a binary MARC21 record containing non-printable delimiters. It is intended for use with MARC-compatible tools.
+The generated output is a binary MARC 21 record containing non-printable delimiters. It is intended for use with MARC-compatible tools.
 
 ---
 
@@ -197,7 +197,7 @@ to execute the example script.
 
 ## Project Notes
 
-* This code was originally written as a low-level exploration of MARC21 internals
+* This code was originally written as a low-level exploration of MARC 21 internals
 * It intentionally avoids external libraries to focus on the raw format
 * The implementation emphasizes correctness and structure over modern PHP patterns
 * The project has been containerized to make it easy to run in a modern environment
